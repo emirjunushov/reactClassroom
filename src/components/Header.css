@@ -1,0 +1,41 @@
+body {
+  background-image: url(https://images.pexels.com/photos/1183099/pexels-photo-1183099.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2);
+  object-fit: cover;
+}
+.heder-image {
+  height: 100px;
+  width: 100px;
+  border-radius: 100%;
+  object-fit: cover;
+  margin-left: 20%;
+}
+.list-header {
+  margin-top: 2%;
+
+  margin-left: 7%;
+}
+.container-header {
+  display: flex;
+
+  justify-content: space-between;
+}
+.input-header {
+  width: 200px;
+  height: 38px;
+  border-radius: 10px;
+
+  background: transparent;
+  border: 1px solid black;
+  margin-top: 10%;
+}
+.input-header::placeholder {
+  color: white;
+}
+.input-header:focus {
+  outline: none !important;
+  color: white;
+}
+
+.list-header {
+  color: white;
+}

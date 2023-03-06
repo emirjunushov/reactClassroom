@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import ContactList from "./components/addContact/ContactList";
+import Section from "./components/addContact/Section";
+import Footer from "./components/Footer";
+import Header from "./components/Header";
 
-function App() {
+const App = () => {
+  let [todos, setTodos] = useState([]);
+
+  console.log(todos);
+
+  // функция котороя обновлять состояние todos принимает task который получает из дочернего компонента AddTodo
+  function handleTask(newObj) {
+    // копируем все что есть в todos до этого
+    let newTodos = [...todos];
+    // добавляем новый таск (обьект )в массив newTodos
+    newTodos.push(newObj);
+    // обновляем состояние todos на актуальные данные
+    setTodos(newTodos);
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+
+      <Section handleTask={handleTask} />
+      <ContactList todos={todos} />
+      <Footer />
     </div>
   );
-}
+};
 
 export default App;

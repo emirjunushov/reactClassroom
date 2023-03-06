@@ -1,0 +1,29 @@
+.container-section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  margin-top: 7%;
+}
+.section-input {
+  margin: 0 0 15%;
+  width: 250px;
+  height: 38px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid black;
+  text-align: center;
+}
+.section-btn {
+  margin-left: 33%;
+  height: 38px;
+  border-radius: 10px;
+  background: transparent;
+  border: 1px solid black;
+  color: white;
+}
+.section-input:focus {
+  outline: none !important;
+  color: white;
+}
